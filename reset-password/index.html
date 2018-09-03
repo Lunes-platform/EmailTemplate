@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,900" rel="stylesheet">
+
+</head>
+<style>
+.container-principal{
+    width: 800px;
+    border-width: 1px;
+   } 
+.titulo{
+    width: 35%;
+    height: 110px;    
+    background:#3b1878;
+    float: left;
+}
+.logo{
+    font-family: 'Offside', cursive;
+    font-weight: normal; 
+    width: 5px;
+    height: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 30%;
+    
+}
+#logo-green{
+    color: #4cd566;
+}
+.logo-dr{
+    width: auto;
+    height: 110px;
+    background-color: #4cd566;
+
+}
+.time{
+    float: right;
+    margin: 47px 27px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+.quebra{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;  
+}
+.dad{
+    width: 100%;
+    height: 300px;
+    background-color: #3f1c7b;
+    text-align: center;
+    position:relative;
+}
+.texto{
+
+    align-items: center;
+    text-align: center;
+    width:100%;
+    position:absolute;
+    text-align: -webkit-center;
+    bottom:0;
+}
+.small{
+    background-color: white;
+    width: 560px;
+    height: 160px; 
+}
+.senha{
+    width: 100%;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #4a4a4a; 
+    padding-top: 40px;
+    font-size: 2.0em;
+}
+.redefinir-texto{
+    width: 60%;
+    font-family: 'Open Sans', sans-serif;
+    color: #4a4a4a;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: -10px;
+}
+.btn{
+    width: 32%;
+    padding: 17px;
+    margin-top: 30px;
+    background-color: #4cd566;
+    border-radius: 100px;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 16.5px 60.5px 0 rgba(58, 58, 58, 0.19);
+    font-weight: bold;
+    
+}
+.produtos{
+    width: 100%;
+    padding-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #4a4a4a;
+    font-weight: 900;
+}
+.linha{
+    width: 4%;
+    height: 1%;
+    background-color: black;
+    margin-top: -8px;
+    
+}
+.redes-sociais{
+    width: 100%;
+    height: 20%;
+    letter-spacing: 5px;
+}
+img{
+    max-width: 100%;
+    margin-top: 25px;
+}
+.notificacao{
+    width: 80%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    text-align: center;
+    color: #000000;
+    margin-top: 50px;
+}
+.footer{
+    width: 800px;
+    height: 50px;
+    background-color: #4cd566;
+    position: absolute;
+	bottom: 0;
+}
+.texto-footer{
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+</style>
+<body>
+    <div class="container-principal">
+    <header>
+        <div class="titulo">
+            <h1 class="logo">Lun<span id="logo-green">e</span>s</p></h1>
+        </div>        
+            <div class="logo-dr">
+            <p class="time">Sexta, Agosto 31, 2018</p>
+        </div>
+    </header>
+    <section> 
+        <div class="quebra"></div>
+            <div class="dad">
+                <div class="texto">
+                     <div class="small">
+
+                        <h1 class="senha">Redefinir sua senha?</h1>
+                        <p class="redefinir-texto">Vocẽ solicitou a redefinição de senha para seu email cadastrado, se não foi vocẽ que solicitou, por favor desconsidere este email.</p>
+                  
+                    <button class="btn" name="button">Redefinir agora</button>
+            
+                    <h3 class="produtos">Nossos Produtos</h3>
+                    <p class="linha"></p>
+                        <div class="redes-sociais">
+                        <img src="twitter.svg">
+                        <img src="medium.svg">
+                        <img src="github.svg">
+                        <img src="facebook.svg">
+                        <img src="linkedin.svg">
+                        <img src="telegram.svg">
+                      </div>
+                        <div class="notificacao">
+                            <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes. Visualização no Navegador | Cancelar assinatura</p>
+                        </div>
+                    
+                     </div>
+                 </div>
+            </div>    
+    <footer class="footer">
+        <P class="texto-footer">Lunes.io</P>
+    </footer>
+</body>
+</html>
