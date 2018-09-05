@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,900" rel="stylesheet">
@@ -11,13 +12,13 @@
 <style>
 .container-principal{
     width: 800px;
-    height:800% ;
    } 
 .titulo{
     width: 35%;
     height: 110px;    
     background:#3b1878;
     float: left;
+    flex-wrap: wrap;
 }
 .logo{
     font-family: 'Offside', cursive;
@@ -60,8 +61,6 @@
     position:relative;
 }
 .texto{
-
-
     width:100%;
     position:absolute;
     text-align: -webkit-center;
@@ -73,7 +72,7 @@
     height: 160px; 
 }
 .senha{
-    width: 50%;
+    width: 80%;
     height: 40px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -83,12 +82,20 @@
     font-size: 2.0em;
 }
 .redefinir-texto{
-    width: 70%;
-    font-family: 'Open Sans', sans-serif;
+    width: 92%;
+    font-family: 'Roboto', sans-serif;
     color: #4a4a4a;
     font-size: 0.8em;
     line-height: 1.7em;
     margin-top: 60px;
+}
+.informacao{
+    width: 100%;
+    padding-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #4a4a4a;
+    font-weight: 900;
 }
 .btn{
     width: 32%;
@@ -100,117 +107,13 @@
     border: none;
     box-shadow: 0 16.5px 60.5px 0 rgba(58, 58, 58, 0.19);
     font-weight: bold;
-    
 }
-.produtos{
-    width: 100%;
-    padding-top: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #4a4a4a;
-    font-weight: 900;
-}
+
 .linha{
     width: 4%;
     height: 1.6%;
     background-color: black;
     margin-top: -8px;
-}
-.box-produtos img{
-  align-items: center;
-}
-
-.box-produtos-2 img{
-   align-items: center;
-}
-.wallet{
-    width: 10%;
-    display: block;
-    line-height: 3em;
-    text-transform: uppercase;
-    margin: 60px 600px 50px 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    font-weight:bold;
-    color: #473088;
-    
-    
-}
-.lunex{
-    width: 10%;
-    display: block;
-    line-height: 3em;
-    text-transform: uppercase;
-    margin: -143px 0px 50px 0px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    font-weight:bold;
-    color: #473088;
-}
-.truth{
-    width: 10%;
-    display: block;
-    line-height: 3em;
-    text-transform: uppercase;
-    margin: -120px 0px 160px 450px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    font-weight:bold;
-    color: #473088;
-    
-}
-.loja-1{
-    width: 10%;
-    display: block;
-    line-height: 3em;
-    text-transform: uppercase;
-    margin: 50px 650px 50px 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    font-weight:bold;
-    color: #473088;
-}
-.loja-2{
-    width: 10%;
-    display: block;
-    line-height: 3em;
-    text-transform: uppercase;
-    margin: -130px 0px 50px 0px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    font-weight:bold;
-    color: #473088;
-}
-.loja-3{
-    width: 17%;
-    display: block;
-    line-height: 3em;
-    text-transform: uppercase;
-    margin: -130px 0px 50px 450px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    font-weight:bold;
-    color: #473088;
-}
-
-.btn-segundo{
-    width: 32%;
-    padding: 17px;
-    border-radius: 100px;
-    color: #3b1878;
-    border-color: #4cd566;
-    font-weight: normal;
-    border: solid 0.5px #4cd566;
-    background: #ffffff;
-
-}
-
-.redes-sociais{
-    width: 100%;
-    height: 20%;
-    letter-spacing: 5px;
-    max-width: 100%;
-    margin-top: 30px;
 }
 .notificacao{
     width: 80%;
@@ -220,14 +123,21 @@
     color: #000000;
     margin-top: 20px;
 }
-.footer{
+.redes-sociais{
+    width: 100%;
+    height: 20%;
+    letter-spacing: 5px;
+    max-width: 100%;
+    margin-top: 30px;
+}
+.rodape{
     width: 800px;
     height: 50px;
     background-color: #4cd566;
     margin-left:-21%;
     
 }
-.texto-footer{
+.texto-rodape{
     width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -244,36 +154,39 @@
             <h1 class="logo">Lun<span id="logo-green">e</span>s</p></h1>
         </div>        
             <div class="logo-dr">
-            <p class="time">Terça, Setembro 4, 2018</p>
+            <p class="time">Quarta, Setembro 5, 2018</p>
         </div>
     </header>
 
         <div class="quebra"></div>
             <div class="dad">
+                <div class="retangulo-green"></div>
+                <div class="imagem-centro">
+                    <h1>A Jornada</h1>
+                    <p></p>
+                    <h2>Lunes na Blockspot Latam 2018</h2>
+                    <img src="https://blog.lunes.io/wp-content/uploads/2018/08/6d0ad-14kthgvbrsa09iq7vazpxeg.jpeg">
+                </div>
+                <div class="retangulo-purple"></div>
                 <div class="texto">
                      <div class="small">
 
-                        <h1 class="senha">Estamos listados na NewsCash</h1>
-                        <p class="redefinir-texto">É com grande prazer que anunciamos a segunda listagem de nossa moeda. NewCash, uma exchange Brasileira.</p>
-                  
+                        <h1 class="senha">Olá, Comunidade Lunes</h1>
+                        <p class="redefinir-texto">Não tem outra forma de iniciar esse texto se não agradecendo a cada um de vocês que estão conosco nessa jornada. Compartilhar
+                        nossa evolução com vocês é motivo de muito orgulho, saber que vocês nos ajudaram, das mais variadas formas, seja através
+                        de sugestões, críticas construtivas etc., é a razão de termos chegado onde chegamos, nos motiva ainda mais a desenvolver
+                        e entregar os melhores produtos e serviços do mercado. Cada detalhe, desde o processo criativo de idealização, até a entrega,
+                        tiveram como objetivos os momentos que prosseguem nossa história, os próximos meses em que contemplaremos o roadmap. A tendência
+                        de agora em diante é a comunidade crescer conforme a Lunes cresce, mas saibam que todos vocês que nos acompanharam até o
+                        presente momento serão eternamente especiais.</p>
+                  <div class="informacao">
                     <button class="btn" name="button">Ler mais...</button>
-            
-                    <h3 class="produtos">Nossos Produtos</h3>
-                    <p class="linha"></p>
-
-                    <div class="box-produtos">
-                        <div><a class="wallet"><img src="wallet.svg"><span>wallet</span></a></div>
-                        <div><a class="lunex"><img src="lunex.svg"><span>exchange</span></a></div>
-                       <div><a class="truth"><img src="truth.svg"><span>truth</span></a></div> 
-                    </div>
-                    <div class="box-produtos-2">
-                        <div><a class="loja-1"><img src="loja-1.svg"><span>store</span></a></div>
-                        <div><a class="loja-2"><img src="loja-2.svg"><span>gateaway</span></a></div>
-                        <div><a class="loja-3"><img src="loja-3.svg"><span>starting point</span></a></div>
-                    </div>
-
-                    <button class="btn-segundo" name="button">Ver todos</button>
-                      
+                     <p class="linha"></p>
+                 </div>
+                <div class="notificacao">
+                    <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes. Visualização no Navegador | Cancelar
+                        assinatura</p>
+                </div>
                     <div class="redes-sociais">
                         <a><img src="twitter.svg"></a>
                         <a><img src="medium.svg"></a>
@@ -282,12 +195,9 @@
                         <a><img src="linkedin.svg"></a>
                         <a><img src="telegram.svg"></a>
                       </div>
-                        <div class="notificacao">
-                            <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes. Visualização no Navegador | Cancelar assinatura</p>
-                        </div>
-                                    <footer class="footer">
-                                        <P class="texto-footer">Lunes.io</P>
-                                    </footer>
+                        <footer class="rodape">
+                            <P class="texto-rodape">Lunes.io</P>
+                        </footer>
                      </div>
 
                  </div>
