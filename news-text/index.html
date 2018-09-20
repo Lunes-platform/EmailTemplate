@@ -1,281 +1,366 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="UTF-8" />
     <title>Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,900" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css" media="only screen and (max-width: 800px)"></style>
 
 </head>
-<style>
-.container-principal{
-    max-width: 800px;
-}
-.titulo{
-    width: 35%;
-    height: 110px;    
-    background:#3b1878;
-    float: left;
-    flex-wrap: wrap;
-}
-.logo{
-    font-family: 'Offside', cursive;
-    font-weight: normal; 
-    width: 5px;
-    height: 20px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 35px;
-    margin-left: 30%;
+
+
+    <style>
+       *{
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .super-container {
+            display: grid;
+            grid-template-rows: 15vh 10vh 55vh 20vh;
+            grid-template-areas: "header" "body" ".dad .dad" ".rodape";
+        }
+
+       
+
+        @media screen and (max-width: 800px) {
     
-}
-#logo-green{
-    color: #4cd566;
-    flex-wrap: wrap;
-}
-.logo-dr{
-    width: auto;
-    height: 110px;
-    background-color: #4cd566;
 
-}
-.time{
-    float: right;
-    margin: 47px 27px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.0em;
-    font-weight: bold;
-}
-.quebra{
-    width: 100%;
-    height: 30px;
-    background-color: #ffffff;
-     
-}
-.retangulo-green{
-    width: 50%;
-    height: 170px;
-    background-color: #4cd566;
-    margin-left: 75px;
-    flex-wrap: wrap;
+            .super{
+                grid-template-areas: "header" "body" ".dad .dad" ".rodape";
+            }
+                
+            }
 
-}
-.retangulo-purple{
-    width: 50%;
-    height: 180px;
-    background-color:#3f1c7b;
-    margin-left: 325px;
-    flex-wrap: wrap;
-}
-.imagem-lunes{
-    width:75%; 
-    height:300px;
-    opacity: 0.99;
-    margin: -346px 0 0 100px;
-    flex-wrap: nowrap;
-    background-image:
-    -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%),url("https://cdn.discordapp.com/attachments/485129974383116301/487007795087015941/imagem-email.jpg"); /* FF3.6-15 */
+        
 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-   
-}
+        .container-principal {
+            max-width: 800px;
+            min-width: 800px;
+        }
+      
+        
 
-.foto{
-   max-width:100%;
-   max-height:100%;
+        .titulo {
+            width: 35%;
+            height: 110px;
+            background: #3b1878;
+            float: left;
+        }
 
-}
+        .logo {
+            font-family: 'Offside', cursive;
+            font-weight: normal;
+            width:auto;
+            height: 20px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            margin-top: 40px;
+        }
 
-.escrita-img{
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    flex-wrap: nowrap;
-    text-align: center;
-    padding: 120px 0 0 15px;
-}
+        #logo-green {
+            color: #4cd566;
+            flex-wrap: wrap;
+        }
 
-.texto-img{
-    width: 30%;
-    display: block;
-    margin: 30px 0 0 210px;
-    font-size: 20px;
-    flex-wrap: wrap;
-    
-}
-.spacer{
-    width: 4%;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 9px 0 0 290px;
-    flex-wrap: wrap;
-     
-}
-.text-3{
-    display: block;
-    margin: 5px 0 0 10px;
-    font-size: 31px;
-    flex-wrap: wrap;
- 
-}
-.texto{
-    width:100%;
-    position:relative;
-    text-align: -webkit-center;
-    bottom:0;
-    margin-top: 130px;
-    flex-wrap: wrap;
-}
-.small{
-    background-color: white;
-    width: 560px;
-    height: 160px;
-    flex-wrap: wrap; 
-}
-.senha{
-    width: 80%;
-    height: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: #4a4a4a; 
-    margin-top: -40px;
-    font-size: 2.0em;
-    flex-wrap: wrap;
-}
-.redefinir-texto{
-    width: 92%;
-    font-family: 'Roboto', sans-serif;
-    color: #4a4a4a;
-    font-size: 0.8em;
-    line-height: 1.7em;
-    margin-bottom: -10px;
-    flex-wrap: wrap;
-    
-}
-.informacao{
-    width: 100%;
-    padding-top: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #4a4a4a;
-    font-weight: 900;
-    flex-wrap: wrap;
-}
-.btn{
-    width: 32%;
-    padding: 17px;
-    margin-bottom: 10px;
-    background-color: #4cd566;
-    border-radius: 100px;
-    color: #ffffff;
-    border: none;
-    box-shadow: 0 16.5px 60.5px 0 rgba(58, 58, 58, 0.19);
-    font-weight: bold;
-}
+        .logo-dr {
+            height: 110px;
+            background-color: #4cd566;
+        }
 
-.linha{
-    width: 4%;
-    height: 2px;
-    background-color: black;
-    margin-bottom: 40px;
-}
-.notificacao{
-    width: 80%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 11px;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 60px;
-}
-.redes-sociais{
-    width: 100%;
-    height: 20%;
-    letter-spacing: 5px;
-    max-width: 100%;
-    margin-bottom: 70px;
-    flex-wrap: wrap;
-}
-.rodape{
-    width: 800px;
-    height: 50px;
-    background-color: #4cd566;
-    margin-left:-21%;
-    
-}
-.texto-rodape{
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    text-align: center;
-    line-height:3.5em;
-}
-</style>
-<body>
+        .time {
+            float: right;
+            margin: 47px 27px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.0em;
+            font-weight: bold;
+        }
+
+        .quebra {
+            width: 100%;
+            height: 30px;
+            background-color: #ffffff;
+        }
+
+        .retangulo-green {
+            width: 50%;
+            height: 155px;
+            background-color: #4cd566;
+            margin-left: 75px;
+            flex-wrap: wrap;
+        }
+
+        .retangulo-purple {
+            width: 50%;
+            height: 145px;
+            background-color: #3f1c7b;
+            margin-left: 245px;
+            flex-wrap: wrap;
+        }
+
+        .imagem-lunes {
+            background-size: cover;
+            width: 65%;
+            height:auto;
+            opacity: 0.99;
+            display: flex;
+            align-items:center; 
+            justify-content:center;
+            overflow:hidden;
+            margin: -265px 0 0 100px;
+            background-image:
+                -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%), url("https://cdn.discordapp.com/attachments/485129974383116301/487007795087015941/imagem-email.jpg");
+            /* FF3.6-15 */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+            /* IE6-9 */
+        }
+
+        .foto {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .escrita-img {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            flex-wrap: nowrap;
+            text-align: center;
+            padding: 120px 0 0 15px;
+        }
+
+        .texto-img {
+            width: 30%;
+            display: block;
+            margin: 30px 210px;
+            font-size: 20px;
+        }
+
+        .spacer {
+            width: 4%;
+            height: 2px;
+            background-color: #ffffff;
+            margin: -18px 0 0 275px;
+            display: flex;
+            align-items: center;
+        }
+
+        .text-3 {
+            display: block;
+            margin: 5px;
+            font-size: 26px;
+            flex-wrap: wrap;
+        }
+
+        .texto {
+            width: 100%;
+            position: relative;
+            text-align: -webkit-center;
+            margin-top: 130px;
+            flex-wrap: wrap;
+        }
+
+        .small {
+            background-color: white;
+            width: 560px;
+            height: 160px;
+            flex-wrap: wrap;
+        }
+
+        .senha {
+            width: 80%;
+            height: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: #4a4a4a;
+            margin-top: -40px;
+            font-size: 2.0em;
+            flex-wrap: wrap;
+        }
+
+        .redefinir-texto {
+            width: 92%;
+            font-family: 'Roboto', sans-serif;
+            color: #4a4a4a;
+            font-size: 0.8em;
+            line-height: 1.7em;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .informacao {
+            width: 100%;
+            padding-top: 35px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            color: #4a4a4a;
+            font-weight: 900;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            width: 32%;
+            padding: 17px;
+            margin-bottom: 30px;
+            background-color: #4cd566;
+            border-radius: 100px;
+            color: #ffffff;
+            border: none;
+            box-shadow: 0 16.5px 60.5px 0 rgba(58, 58, 58, 0.19);
+            font-weight: bold;
+        }
+
+        .linha {
+            width: 4%;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 40px;
+        }
+
+        .notificacao {
+            width: 80%;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+            text-align: center;
+            color: #000000;
+            margin-bottom: 60px;
+        }
+
+        .redes-sociais {
+            width: 100%;
+            height: 20%;
+            letter-spacing: 5px;
+            max-width: 100%;
+            margin-bottom: 70px;
+            flex-wrap: wrap;
+            background-size: cover;
+        }
+
+        .rodape {
+            width: 800px;
+            max-width: 800px;
+            background-color: #4cd566;
+            margin-left:-21%;
+                       
+        }
+
+        .texto-rodape {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            display: inline;
+            line-height: 3.5em;
+        
+        }
+    </style>
+    <body class="super">
+    <div class="super-container">
     <div class="container-principal">
-    <header>
-        <div class="titulo">
-            <h1 class="logo">Lun<span id="logo-green">e</span>s</p></h1>
-        </div>        
+        <header class="header">
+            <div class="titulo">
+                <h1 class="logo">Lun
+                    <span id="logo-green">e
+                    </span>s
+                </h1>
+            </div>
             <div class="logo-dr">
-            <p class="time">Quarta, Setembro 5, 2018</p>
+                <p class="time">Quarta, Setembro 5, 2018
+                </p>
+            </div>
+        </header>
+        <div class="quebra">
         </div>
-    </header>
-
-        <div class="quebra"></div>
-            <div class="dad">
-                <div class="retangulo-green"></div>
-                <div class="retangulo-purple"></div>
-                <div class="imagem-centro">
-                    <div class="imagem-lunes">
-                        
-                            <div class="container">
-                                <h2 class="escrita-img"><span class="texto-img">A Jornada</span><span><p class="spacer"></p> </span><span class="text-3">Lunes
-                                        na Blockspot Latam 2018</span></h2>
-                            </div>
+        <div class="dad">
+            <div class="retangulo-green">
+            </div>
+            <div class="retangulo-purple">
+            </div>
+            <div class="imagem-centro">
+                <div class="imagem-lunes">
+                    <div class="container">
+                        <h2 class="escrita-img">
+                            <span class="texto-img">A Jornada
+                            </span>
+                            <span>
+                                <p class="spacer">
+                                </p>
+                            </span>
+                            <span class="text-3">Lunes
+                                na Blockspot Latam 2018
+                            </span>
+                        </h2>
                     </div>
-                        <!-- <h2 class="escrita-img"><span class="texto-img">A Jornada</span><span><p class="spacer"></p> </span><span class="text-3">Lunes na Blockspot Latam 2018</span></h2>    -->
                 </div>
-              
-                <div class="texto">
-                     <div class="small">
-
-                        <h1 class="senha">Olá, Comunidade Lunes</h1>
-                        <p class="redefinir-texto">Não tem outra forma de iniciar esse texto se não agradecendo a cada um de vocês que estão conosco nessa jornada. Compartilhar
-                        nossa evolução com vocês é motivo de muito orgulho, saber que vocês nos ajudaram, das mais variadas formas, seja através
-                        de sugestões, críticas construtivas etc., é a razão de termos chegado onde chegamos, nos motiva ainda mais a desenvolver
-                        e entregar os melhores produtos e serviços do mercado. Cada detalhe, desde o processo criativo de idealização, até a entrega,
-                        tiveram como objetivos os momentos que prosseguem nossa história, os próximos meses em que contemplaremos o roadmap. A tendência
-                        de agora em diante é a comunidade crescer conforme a Lunes cresce, mas saibam que todos vocês que nos acompanharam até o
-                        presente momento serão eternamente especiais.</p>
-                  <div class="informacao">
-                    <button class="btn" name="button">Ler mais...</button>
-                     <p class="linha"></p>
-                 </div>
-                <div class="notificacao">
-                    <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes. Visualização no Navegador | Cancelar
-                        assinatura</p>
-                </div>
+            </div>
+            <div class="texto">
+                <div class="small">
+                    <h1 class="senha">Olá, Comunidade Lunes
+                    </h1>
+                    <p class="redefinir-texto">Não tem outra forma de iniciar esse texto se não agradecendo a cada um
+                        de vocês que estão conosco nessa jornada. Compartilhar
+                        nossa evolução com vocês é motivo de muito orgulho, saber que vocês nos ajudaram, das mais
+                        variadas formas, seja através
+                        de sugestões, críticas construtivas etc., é a razão de termos chegado onde chegamos, nos motiva
+                        ainda mais a desenvolver
+                        e entregar os melhores produtos e serviços do mercado. Cada detalhe, desde o processo criativo
+                        de idealização, até a entrega,
+                        tiveram como objetivos os momentos que prosseguem nossa história, os próximos meses em que
+                        contemplaremos o roadmap. A tendência
+                        de agora em diante é a comunidade crescer conforme a Lunes cresce, mas saibam que todos vocês
+                        que nos acompanharam até o
+                        presente momento serão eternamente especiais.
+                    </p>
+                    <div class="informacao">
+                        <button class="btn" name="button">Ler mais...
+                        </button>
+                        <p class="linha">
+                        </p>
+                    </div>
+                    <div class="notificacao">
+                        <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes.
+                            Visualização no Navegador | Cancelar
+                            assinatura
+                        </p>
+                    </div>
                     <div class="redes-sociais">
-                        <a><img src="https://blog.lunes.io/wp-content/uploads/2018/09/twitter@2x.png"></a>
-                        <a><img src="https://blog.lunes.io/wp-content/uploads/2018/09/medium@2x.png"></a>
-                        <a><img src="https://blog.lunes.io/wp-content/uploads/2018/09/github@2x.png"></a>
-                        <a><img src="https://blog.lunes.io/wp-content/uploads/2018/09/facebook@2x.png"></a>
-                        <a><img src="https://blog.lunes.io/wp-content/uploads/2018/09/linked-in@2x.png"></a>
-                        <a><img src="https://blog.lunes.io/wp-content/uploads/2018/09/telegram@2x.png"></a>
-                      </div>
-                        <footer class="rodape">
-                            <P class="texto-rodape">Lunes.io</P>
-                        </footer>
-                     </div>
-
-                 </div>
-
-            </div>    
-
+                        <a>
+                            <img src="https://blog.lunes.io/wp-content/uploads/2018/09/twitter@2x.png" />
+                        </a>
+                        <a>
+                            <img src="https://blog.lunes.io/wp-content/uploads/2018/09/medium@2x.png" />
+                        </a>
+                        <a>
+                            <img src="https://blog.lunes.io/wp-content/uploads/2018/09/github@2x.png" />
+                        </a>
+                        <a>
+                            <img src="https://blog.lunes.io/wp-content/uploads/2018/09/facebook@2x.png" />
+                        </a>
+                        <a>
+                            <img src="https://blog.lunes.io/wp-content/uploads/2018/09/linked-in@2x.png" />
+                        </a>
+                        <a>
+                            <img src="https://blog.lunes.io/wp-content/uploads/2018/09/telegram@2x.png" />
+                        </a>
+                    </div>
+                    <div>
+                    <footer class="rodape">
+                        <h3 class="texto-rodape">Lunes.io
+                        </h3>
+                    </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
