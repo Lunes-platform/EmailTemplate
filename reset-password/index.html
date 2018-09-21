@@ -1,197 +1,272 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="UTF-8" />
     <title>Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,900" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css" media="only screen and (max-width: 800px)"></style>
 
 </head>
+
+
 <style>
-.container-principal{
-    width: 800px;
-    border-width: 1px;
-   } 
-.titulo{
-    width: 35%;
-    height: 110px;    
-    background:#3b1878;
-    float: left;
-}
-.logo{
-    font-family: 'Offside', cursive;
-    font-weight: normal; 
-    width: 5px;
-    height: 20px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 35px;
-    margin-left: 30%;
-    
-}
-#logo-green{
-    color: #4cd566;
-}
-.logo-dr{
-    width: auto;
-    height: 110px;
-    background-color: #4cd566;
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
 
-}
-.time{
-    float: right;
-    margin: 47px 27px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.0em;
-    font-weight: bold;
-}
-.quebra{
-    width: 100%;
-    height: 50px;
-    background-color: #ffffff;  
-}
-.dad{
-    width: 100%;
-    height: 300px;
-    background-color: #3f1c7b;
-    text-align: center;
-    position:relative;
-}
-.texto{
+    .super-container {
+        display: grid;
+        grid-template-rows: 15vh 10vh 55vh 20vh;
+        grid-template-areas: "header""body"".dad .dad"".rodape";
+    }
 
-    align-items: center;
-    text-align: center;
-    width:100%;
-    position:absolute;
-    text-align: -webkit-center;
-    bottom:0;
+
+
+    @media screen and (max-width: 800px) {
+
+
+        .super {
+            grid-template-areas: "header""body"".dad .dad"".rodape";
+        }
+
+    }
+
+
+
+    .container-principal {
+        max-width: 800px;
+        min-width: 800px;
+    }
+
+
+
+    .titulo {
+        width: 35%;
+        height: 110px;
+        background: #3b1878;
+        float: left;
+    }
+
+    .logo {
+        font-family: 'Offside', cursive;
+        font-weight: normal;
+        width: auto;
+        height: 20px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    #logo-green {
+        color: #4cd566;
+        flex-wrap: wrap;
+    }
+
+    .logo-dr {
+        height: 110px;
+        background-color: #4cd566;
+    }
+
+    .time {
+        float: right;
+        margin: 47px 27px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.0em;
+        font-weight: bold;
+    }
+
+    .quebra {
+        width: 100%;
+        height: 50px;
+        background-color: #ffffff;
+    }
+    .dad{
+        width: 100%;
+        height: 300px;
+        background-color: #3f1c7b;
+        text-align: center;
+        position:relative;
 }
-.small{
-    background-color: white;
-    width: 560px;
-    height: 160px; 
+
+    .texto {
+        width:100%;
+        position:absolute;
+        text-align: -webkit-center;
+        bottom:-1%;
+    }
+
+    .small {
+        background-color: white;
+        width: 560px;
+        height: 160px;
+    }
+
+    .senha {
+        width: 100%;
+        height: 40px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: #4a4a4a; 
+        padding-top: 40px;
+        font-size: 2.0em;
+    }
+
+    .redefinir-texto {
+        width: 60%;
+        font-family: 'Open Sans', sans-serif;
+        color: #4a4a4a;
+        font-size: 0.8em;
+        line-height: 1.7em;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 32%;
+        padding: 17px;
+        margin: 50px;
+        background-color: #4cd566;
+        border-radius: 100px;
+        color: #ffffff;
+        border: none;
+        box-shadow: 0 16.5px 60.5px 0 rgba(58, 58, 58, 0.19);
+        font-weight: bold;
+    }
+    .produtos{
+        width: 100%;
+        padding-top: 40px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: #4a4a4a;
+        font-weight: 900;
 }
-.senha{
-    width: 100%;
-    height: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: #4a4a4a; 
-    padding-top: 40px;
-    font-size: 2.0em;
-}
-.redefinir-texto{
-    width: 60%;
-    font-family: 'Open Sans', sans-serif;
-    color: #4a4a4a;
-    font-size: 0.8em;
-    line-height: 1.7em;
-    margin-top: -10px;
-}
-.btn{
-    width: 32%;
-    padding: 17px;
-    margin-top: 30px;
-    background-color: #4cd566;
-    border-radius: 100px;
-    color: #ffffff;
-    border: none;
-    box-shadow: 0 16.5px 60.5px 0 rgba(58, 58, 58, 0.19);
-    font-weight: bold;
-    
-}
-.produtos{
-    width: 100%;
-    padding-top: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #4a4a4a;
-    font-weight: 900;
-}
-.linha{
-    width: 4%;
-    height: 1%;
-    background-color: black;
-    margin-top: -8px;
-    
-}
-.redes-sociais{
-    width: 100%;
-    height: 20%;
-    letter-spacing: 5px;
-}
+
+    .linha {
+        width: 4%;
+        height: 2px;
+        background-color: black;
+        margin: 20px;
+        
+    }
+.redes-sociais {
+        width: 100%;
+        height: 20%;
+        letter-spacing: 5px;
+        max-width: 100%;
+        margin-bottom: 55px;
+        flex-wrap: wrap;
+        background-size: cover;
+    }
+
 img{
     max-width: 100%;
     margin-top: 25px;
-}
-.notificacao{
-    width: 80%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 11px;
-    text-align: center;
-    color: #000000;
-    margin-top: 50px;
-}
-.footer{
-    width: 800px;
-    height: 50px;
-    background-color: #4cd566;
-    position: absolute;
-	bottom: 0;
-}
-.texto-footer{
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    text-align: center;
-}
-</style>
-<body>
-    <div class="container-principal">
-    <header>
-        <div class="titulo">
-            <h1 class="logo">Lun<span id="logo-green">e</span>s</p></h1>
-        </div>        
-            <div class="logo-dr">
-            <p class="time">Sexta, Agosto 31, 2018</p>
-        </div>
-    </header>
-    <section> 
-        <div class="quebra"></div>
-            <div class="dad">
-                <div class="texto">
-                     <div class="small">
+} 
+ .notificacao {
+        width: 80%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 11px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 50px;
+    }
+    .rodape {
+        width: 800px;
+        max-width: 800px;
+        background-color: #4cd566;
+        margin-left: -21%;
 
-                        <h1 class="senha">Redefinir sua senha?</h1>
-                        <p class="redefinir-texto">Vocẽ solicitou a redefinição de senha para seu email cadastrado, se não foi vocẽ que solicitou, por favor desconsidere este email.</p>
-                  
-                    <button class="btn" name="button">Redefinir agora</button>
-            
-                    <h3 class="produtos">Nossos Produtos</h3>
-                    <p class="linha"></p>
-                        <div class="redes-sociais">
-                        <img src="https://blog.lunes.io/wp-content/uploads/2018/09/twitter@2x.png">
-                        <img src="https://blog.lunes.io/wp-content/uploads/2018/09/medium@2x.png">
-                        <img src="https://blog.lunes.io/wp-content/uploads/2018/09/github@2x.png">
-                        <img src="https://blog.lunes.io/wp-content/uploads/2018/09/facebook@2x.png">
-                        <img src="https://blog.lunes.io/wp-content/uploads/2018/09/linked-in@2x.png">
-                        <img src="https://blog.lunes.io/wp-content/uploads/2018/09/telegram@2x.png">
-                      </div>
-                        <div class="notificacao">
-                            <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes. Visualização no Navegador | Cancelar assinatura</p>
+    }
+
+    .texto-rodape {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+        display: inline;
+        line-height: 3.5em;
+    }
+</style>
+
+<body class="super">
+    <div class="super-container">
+        <div class="container-principal">
+            <header class="header">
+                <div class="titulo">
+                    <h1 class="logo">Lun
+                        <span id="logo-green">e
+                        </span>s
+                    </h1>
+                </div>
+                <div class="logo-dr">
+                    <p class="time">Sexta, Agosto 31, 2018
+                    </p>
+                </div>
+            </header>
+            <div class="quebra">
+            </div>
+            <div class="dad">
+
+                <div class="texto">
+                    <div class="small">
+                        <h1 class="senha">Redefinir sua senha?
+                        </h1>
+                        <p class="redefinir-texto">Vocẽ solicitou a redefinição de senha para seu email cadastrado, se não foi vocẽ que solicitou, por favor desconsidere
+                        este email.
+                        </p>
+                        <div class="informacao">
+                            <button class="btn" name="button">Redefinir agora
+                            </button>
+                            <h3 class="produtos">Nossos Produtos</h3>
+                            <p class="linha"></p>
+                           
                         </div>
-                    
-                     </div>
-                 </div>
-            </div>    
-    <footer class="footer">
-        <P class="texto-footer">Lunes.io</P>
-    </footer>
+                        
+                        <div class="redes-sociais">
+                            <a>
+                                <img src="https://blog.lunes.io/wp-content/uploads/2018/09/twitter@2x.png" />
+                            </a>
+                            <a>
+                                <img src="https://blog.lunes.io/wp-content/uploads/2018/09/medium@2x.png" />
+                            </a>
+                            <a>
+                                <img src="https://blog.lunes.io/wp-content/uploads/2018/09/github@2x.png" />
+                            </a>
+                            <a>
+                                <img src="https://blog.lunes.io/wp-content/uploads/2018/09/facebook@2x.png" />
+                            </a>
+                            <a>
+                                <img src="https://blog.lunes.io/wp-content/uploads/2018/09/linked-in@2x.png" />
+                            </a>
+                            <a>
+                                <img src="https://blog.lunes.io/wp-content/uploads/2018/09/telegram@2x.png" />
+                            </a>
+                        </div>
+                        <div class="notificacao">
+                            <p>Você recebeu este email devido a uma transação ou uma relação anterior com a Lunes.
+                                Visualização no Navegador | Cancelar
+                                assinatura
+                            </p>
+                        </div>
+                        <div>
+                            <footer class="rodape">
+                                <h3 class="texto-rodape">Lunes.io
+                                </h3>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
